@@ -10,9 +10,7 @@ router.use('/', function (req, res, next) {
         return next();
     }
     
-    /*You should create your Class or use String, don't use Error class*/
-    next(new MyError('You didn't attach your name'))
-    
+    next(new MyErrorClass('You didn't attach your name'));//You should create your Class or use String, don't use Error class
 }, function (req, res, next) {
     res.send('Hello Mr. ' + req.params.name);
 })
@@ -29,7 +27,6 @@ io.emit('/', {name: 'darkwar123'}, function (err, response) {
         return console.error(err.message); 
     }
     
-    /*Writes 'Hello Mr. darkwar123'*/
-    console.info(response);
+    console.info(response);//Writes 'Hello Mr. darkwar123'
 })
 ```
