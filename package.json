@@ -1,0 +1,27 @@
+{
+  "name": "node-socket.io-router",
+  "version": "1.0.0",
+  "description": "Router class for socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkwar123/node-socket.io-router.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Gadzhiev Said",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darkwar123/node-socket.io-router/issues"
+  },
+  "homepage": "https://github.com/darkwar123/node-socket.io-router#readme",
+  "dependencies": {
+    "array-flatten": "^2.1.1",
+    "async": "^2.5.0",
+    "debug": "^2.6.8"
+  }
+}
