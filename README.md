@@ -1,4 +1,4 @@
-# Router system for socket.io
+# Router class for socket.io
 Router class for socket.io as an express.Router class.
 # Example
 Example of the server-side code:
