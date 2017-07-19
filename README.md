@@ -5,14 +5,15 @@ Example of the server-side code:
 ```javascript
 const router = require('node-socket.io-router').Router();
 
-router.use('/', (req, res, next) => {
+router.use('/', function (req, res, next) {
     if(req.params.name){
         return next();
     }
     
     /*You should create your Class or use String, don't use Error class*/
-    next(new MyError('You didn't attach your name'));
-}, (req, res, next) => {
+    next(new MyError('You didn't attach your name'))
+    
+}, function (req, res, next) {
     res.send('Hello Mr. ' + req.params.name);
 })
 
@@ -23,7 +24,7 @@ Example of the client-side code:
 ```javascript
 var io = new io();
 
-io.emit('/', {name: 'darkwar123'}, (err, response) => {
+io.emit('/', {name: 'darkwar123'}, function (err, response) {
     if(err){
         return console.error(err.message); 
     }
